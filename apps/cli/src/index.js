@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+import { help } from "./commands/help.js";
+import { version } from "./commands/version.js";
+import { doctor } from "./commands/doctor.js";
+import { init } from "./commands/init.js";
+
 const command = process.argv[2] || "help";
 
 console.log("==================================");
@@ -10,27 +15,17 @@ console.log("");
 
 switch (command) {
   case "version":
-    console.log("Version: 0.1.0");
+    version();
     break;
 
   case "doctor":
-    console.log("System Check");
-    console.log("✔ Node.js detected");
-    console.log("✔ Git detected");
-    console.log("✔ BAIOS CLI installed");
+    doctor();
     break;
 
   case "init":
-    console.log("Initializing BAIOS project...");
+    init();
     break;
 
-  case "help":
   default:
-    console.log("Available Commands:");
-    console.log("");
-    console.log("  baios help");
-    console.log("  baios version");
-    console.log("  baios doctor");
-    console.log("  baios init");
-    break;
+    help();
 }
