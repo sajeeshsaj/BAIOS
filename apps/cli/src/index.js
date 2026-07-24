@@ -4,6 +4,7 @@ import { help } from "./commands/help.js";
 import { version } from "./commands/version.js";
 import { doctor } from "./commands/doctor.js";
 import { init } from "./commands/init.js";
+import { config } from "./commands/config.js";
 
 const command = process.argv[2] || "help";
 
@@ -24,6 +25,10 @@ switch (command) {
 
   case "init":
     init();
+    break;
+
+  case "config":
+    config();
     break;
 
   default:
