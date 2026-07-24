@@ -1,0 +1,5 @@
+[project]
+name = "baios"
+version = "0.1.0"
+description = "Bro&Bro AI Operating System"
+requires-python = ">=3.11"
